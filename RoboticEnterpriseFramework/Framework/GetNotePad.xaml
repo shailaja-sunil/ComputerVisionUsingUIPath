@@ -8,7 +8,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1211,2871</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1197,2871</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>GetNotePad_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="80">
@@ -94,6 +94,7 @@
       <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
       <AssemblyReference>UiPath.Mail.Activities.Design</AssemblyReference>
       <AssemblyReference>Text-To-Speech</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
   <Sequence DisplayName="GetNotePad" sap:VirtualizedContainerService.HintSize="518,2706" sap2010:WorkflowViewState.IdRef="Sequence_1">
@@ -1253,7 +1254,7 @@
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </ui:CommentOut>
-      <p:CVScope ContinueOnError="{x:Null}" DelayBefore="{x:Null}" Server="{x:Null}" ApiKey="d4e4zVevzyGyycTgin41UT2ARPpJ11jAZN68XcU60iwq2ftmHDImIvMR3XpxKXDEiLYgUXzlLrQH+emYPRgvKQ==" CvMethod="ElementDetection, OCR" DesignTimeCacheId="637a5cc8-c883-49e3-93a1-270bb2a1661e" DisplayName="CV Screen Scope 'editable text'" sap:VirtualizedContainerService.HintSize="434,1555" sap2010:WorkflowViewState.IdRef="CVScope_3" Version="V2">
+      <p:CVScope ContinueOnError="{x:Null}" Server="{x:Null}" ApiKey="d4e4zVevzyGyycTgin41UT2ARPpJ11jAZN68XcU60iwq2ftmHDImIvMR3XpxKXDEiLYgUXzlLrQH+emYPRgvKQ==" CvMethod="ElementDetection, OCR" DelayBefore="0" DesignTimeCacheId="637a5cc8-c883-49e3-93a1-270bb2a1661e" DisplayName="CV Screen Scope 'editable text'" sap:VirtualizedContainerService.HintSize="434,1555" sap2010:WorkflowViewState.IdRef="CVScope_3" Version="V2">
         <p:CVScope.Body>
           <ActivityAction x:TypeArguments="x:Object">
             <ActivityAction.Argument>
@@ -1264,7 +1265,7 @@
                 <Variable x:TypeArguments="x:String" Name="variable1" />
                 <Variable x:TypeArguments="x:String" Name="StrDate" />
               </Sequence.Variables>
-              <p:CvTypeIntoWithDescriptor DeselectAfter="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" ClickBeforeTyping="True" Descriptor="[&quot;Target: Image (11,55,1256,644)&quot;]" DesignTimeCacheId="637a5cc8-c883-49e3-93a1-270bb2a1661e" DesignTimeScaleFactor="1" DisplayName="CV Type Into - Image" EmptyField="True" sap:VirtualizedContainerService.HintSize="400,164" sap2010:WorkflowViewState.IdRef="CvTypeIntoWithDescriptor_4" InformativeScreenshot="31268c7d06d76d7e8513edc8726c05ee" Text="[in_Result]" Version="V2">
+              <p:CvTypeIntoWithDescriptor DeselectAfter="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" ClickBeforeTyping="True" DelayBefore="0" DelayBetweenKeys="0" Descriptor="[&quot;Target: Image (11,55,1256,644)&quot;]" DesignTimeCacheId="637a5cc8-c883-49e3-93a1-270bb2a1661e" DesignTimeScaleFactor="1" DisplayName="CV Type Into - Image" EmptyField="True" sap:VirtualizedContainerService.HintSize="400,164" sap2010:WorkflowViewState.IdRef="CvTypeIntoWithDescriptor_4" InformativeScreenshot="31268c7d06d76d7e8513edc8726c05ee" Text="[in_Result]" Version="V2">
                 <p:CvTypeIntoWithDescriptor.DesignTimeDescriptor>
                   <uc:CvDescriptor>
                     <uc:CvDescriptor.Target>
@@ -1339,7 +1340,7 @@
                   <OutArgument x:TypeArguments="x:String">[StrDate]</OutArgument>
                 </Assign.To>
                 <Assign.Value>
-                  <InArgument x:TypeArguments="x:String">[Now.ToString(“dd_MM_yyyy_hh_ss”)]</InArgument>
+                  <InArgument x:TypeArguments="x:String">[Now.ToString(“dd_MM_yyyy_hh_mm_ss”)]</InArgument>
                 </Assign.Value>
               </Assign>
               <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="400,51" sap2010:WorkflowViewState.IdRef="CommentOut_3">

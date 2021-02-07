@@ -5,7 +5,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1211,801</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1197,801</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>VNC_Client_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="38">
@@ -114,7 +114,7 @@
           <av:Size x:Key="ShapeSize">200,51</av:Size>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <TryCatch sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+      <TryCatch sap:VirtualizedContainerService.HintSize="713,2906" sap2010:WorkflowViewState.IdRef="TryCatch_1">
         <TryCatch.Try>
           <Sequence sap:VirtualizedContainerService.HintSize="675,2657" sap2010:WorkflowViewState.IdRef="Sequence_5">
             <sap:WorkflowViewStateService.ViewState>
@@ -183,7 +183,7 @@
                 </Catch>
               </TryCatch.Catches>
             </TryCatch>
-            <p:CVScope ContinueOnError="{x:Null}" DelayBefore="{x:Null}" Server="{x:Null}" ApiKey="d4e4zVevzyGyycTgin41UT2ARPpJ11jAZN68XcU60iwq2ftmHDImIvMR3XpxKXDEiLYgUXzlLrQH+emYPRgvKQ==" CvMethod="ElementDetection, OCR" DesignTimeCacheId="452ec0b1-dfbb-4587-8807-115b94bc6851" DisplayName="CV Screen Scope 'vncviewer.exe NXL96261'" sap:VirtualizedContainerService.HintSize="633,2050" sap2010:WorkflowViewState.IdRef="CVScope_2" Version="V2">
+            <p:CVScope ContinueOnError="{x:Null}" Server="{x:Null}" ApiKey="d4e4zVevzyGyycTgin41UT2ARPpJ11jAZN68XcU60iwq2ftmHDImIvMR3XpxKXDEiLYgUXzlLrQH+emYPRgvKQ==" CvMethod="ElementDetection, OCR" DelayBefore="0" DesignTimeCacheId="452ec0b1-dfbb-4587-8807-115b94bc6851" DisplayName="CV Screen Scope 'vncviewer.exe NXL96261'" sap:VirtualizedContainerService.HintSize="633,2050" sap2010:WorkflowViewState.IdRef="CVScope_2" Version="V2">
               <p:CVScope.Body>
                 <ActivityAction x:TypeArguments="x:Object">
                   <ActivityAction.Argument>
@@ -521,7 +521,7 @@
           <av:PointCollection x:Key="ConnectorLocation">300,178.5 300,227</av:PointCollection>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="514,1780" sap2010:WorkflowViewState.IdRef="TryCatch_4">
+      <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="TryCatch_4">
         <TryCatch.Try>
           <Sequence sap:VirtualizedContainerService.HintSize="476,1531" sap2010:WorkflowViewState.IdRef="Sequence_12">
             <sap:WorkflowViewStateService.ViewState>
@@ -536,7 +536,7 @@
                 <OutArgument x:TypeArguments="ss:SecureString" x:Key="out_Password">[Pwd]</OutArgument>
               </ui:InvokeWorkflowFile.Arguments>
             </ui:InvokeWorkflowFile>
-            <p:CVScope ContinueOnError="{x:Null}" DelayBefore="{x:Null}" Server="{x:Null}" ApiKey="d4e4zVevzyGyycTgin41UT2ARPpJ11jAZN68XcU60iwq2ftmHDImIvMR3XpxKXDEiLYgUXzlLrQH+emYPRgvKQ==" CvMethod="ElementDetection, OCR" DesignTimeCacheId="8439f8b6-5cf0-45f6-8aa3-a0c6925e23df" DisplayName="CV Screen Scope 'vncviewer.exe VNC'" sap:VirtualizedContainerService.HintSize="434,1287" sap2010:WorkflowViewState.IdRef="CVScope_3" Version="V2">
+            <p:CVScope ContinueOnError="{x:Null}" Server="{x:Null}" ApiKey="d4e4zVevzyGyycTgin41UT2ARPpJ11jAZN68XcU60iwq2ftmHDImIvMR3XpxKXDEiLYgUXzlLrQH+emYPRgvKQ==" CvMethod="ElementDetection, OCR" DelayBefore="0" DesignTimeCacheId="8439f8b6-5cf0-45f6-8aa3-a0c6925e23df" DisplayName="CV Screen Scope 'vncviewer.exe VNC'" sap:VirtualizedContainerService.HintSize="434,1287" sap2010:WorkflowViewState.IdRef="CVScope_3" Version="V2">
               <p:CVScope.Body>
                 <ActivityAction x:TypeArguments="x:Object">
                   <ActivityAction.Argument>
@@ -628,7 +628,7 @@
                         </ui:Target>
                       </p:CvTypeIntoWithDescriptor.Target>
                     </p:CvTypeIntoWithDescriptor>
-                    <p:CvClickWithDescriptor CursorMotionType="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" Descriptor="[&quot;Target: Text 'Sign in' (827,493,39,16)&quot; +&#xA;&quot;Anchor: Button (809,488,75,24)&quot;]" DesignTimeCacheId="7838b175-d3c3-469f-952e-76c171036900" DesignTimeScaleFactor="1" DisplayName="CV Click - Text" sap:VirtualizedContainerService.HintSize="334,136" sap2010:WorkflowViewState.IdRef="CvClickWithDescriptor_5" InformativeScreenshot="947b688692c4bef480768c01c1f6b1c4" KeyModifiers="None" MouseButton="BTN_LEFT" Version="V2">
+                    <p:CvClickWithDescriptor CursorMotionType="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" Descriptor="[&quot;Target: Text 'Sign in' (827,493,39,16)&quot; +&#xA;&quot;Anchor: Button (809,488,75,24)&quot;]" DesignTimeCacheId="7838b175-d3c3-469f-952e-76c171036900" DesignTimeScaleFactor="1" DisplayName="CV Click - Text" sap:VirtualizedContainerService.HintSize="400,136" sap2010:WorkflowViewState.IdRef="CvClickWithDescriptor_5" InformativeScreenshot="947b688692c4bef480768c01c1f6b1c4" KeyModifiers="None" MouseButton="BTN_LEFT" Version="V2">
                       <p:CvClickWithDescriptor.CursorPosition>
                         <ui:CursorPosition Position="Center">
                           <ui:CursorPosition.OffsetX>
@@ -662,8 +662,8 @@
                         </ui:Target>
                       </p:CvClickWithDescriptor.Target>
                     </p:CvClickWithDescriptor>
-                    <s1:TextToSpeech DisplayName="Text to speech" sap:VirtualizedContainerService.HintSize="334,22" sap2010:WorkflowViewState.IdRef="TextToSpeech_5" Rate="-20" Text="Connecting.." Voice="Female" Volume="200" />
-                    <ui:ClickImage ContinueOnError="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_DOUBLE" DisplayName="Double Click Image" sap:VirtualizedContainerService.HintSize="334,154" sap2010:WorkflowViewState.IdRef="ClickImage_4" KeyModifiers="None" MouseButton="BTN_LEFT">
+                    <s1:TextToSpeech DisplayName="Text to speech" sap:VirtualizedContainerService.HintSize="400,22" sap2010:WorkflowViewState.IdRef="TextToSpeech_5" Rate="-20" Text="Connecting.." Voice="Female" Volume="200" />
+                    <ui:ClickImage ContinueOnError="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_DOUBLE" DisplayName="Double Click Image" sap:VirtualizedContainerService.HintSize="400,154" sap2010:WorkflowViewState.IdRef="ClickImage_4" KeyModifiers="None" MouseButton="BTN_LEFT">
                       <ui:ClickImage.CursorPosition>
                         <ui:CursorPosition Position="Center">
                           <ui:CursorPosition.OffsetX>

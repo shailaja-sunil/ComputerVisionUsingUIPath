@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="CV_WebScraping" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:p="http://schemas.uipath.com/workflow/activities/cv" xmlns:p1="http://schemas.uipath.com/workflow/activities/ocr" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:s1="clr-namespace:Speech;assembly=Text-To-Speech" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Drawing;assembly=System.Drawing" xmlns:sd1="clr-namespace:System.Data;assembly=System.Data" xmlns:uc="clr-namespace:UiPath.CV;assembly=UiPath.CV" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="CV_WebScraping" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:p="http://schemas.uipath.com/workflow/activities/cv" xmlns:p1="http://schemas.uipath.com/workflow/activities/ocr" xmlns:s="clr-namespace:Speech;assembly=Text-To-Speech" xmlns:s1="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Drawing;assembly=System.Drawing" xmlns:sd1="clr-namespace:System.Data;assembly=System.Data" xmlns:uc="clr-namespace:UiPath.CV;assembly=UiPath.CV" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
     <x:Property Name="out_webOutput" Type="OutArgument(x:String)" />
     <x:Property Name="out_Var" Type="OutArgument(x:String)" />
@@ -8,7 +8,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1199,1046</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1006,1046</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Group_I_CV_WebScrapingNew_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="78">
@@ -129,7 +129,7 @@
               <InArgument x:TypeArguments="x:String">[Nothing]</InArgument>
             </Assign.Value>
           </Assign>
-          <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="632,3852" sap2010:WorkflowViewState.IdRef="TryCatch_5">
+          <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="632,4044" sap2010:WorkflowViewState.IdRef="TryCatch_5">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -137,13 +137,13 @@
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
             <TryCatch.Try>
-              <p:CVScope ContinueOnError="{x:Null}" DelayBefore="{x:Null}" sap2010:Annotation.AnnotationText="Opens the Window the Remote Machine" ApiKey="Vx8IF8wyfCRFTQy6eits17yZUpWTwNUBdDTrvCcuELbrjiAu4Uty2TJgt6qiIKsrrPfgi3NBOmru9W/ruJBXIQ==" CvMethod="ElementDetection, OCR" DesignTimeCacheId="0f94afca-25c1-48ce-a204-1f931a323ccf" DisplayName="CV Screen Scope  - Remote Machine" sap:VirtualizedContainerService.HintSize="594,3603" sap2010:WorkflowViewState.IdRef="CVScope_1" Server="https://cv.uipath.com" Version="V2">
+              <p:CVScope ContinueOnError="{x:Null}" DelayBefore="{x:Null}" sap2010:Annotation.AnnotationText="Opens the Window the Remote Machine" ApiKey="Vx8IF8wyfCRFTQy6eits17yZUpWTwNUBdDTrvCcuELbrjiAu4Uty2TJgt6qiIKsrrPfgi3NBOmru9W/ruJBXIQ==" CvMethod="ElementDetection, OCR" DesignTimeCacheId="0f94afca-25c1-48ce-a204-1f931a323ccf" DisplayName="CV Screen Scope  - Remote Machine" sap:VirtualizedContainerService.HintSize="594,3795" sap2010:WorkflowViewState.IdRef="CVScope_1" Server="https://cv.uipath.com" Version="V2">
                 <p:CVScope.Body>
                   <ActivityAction x:TypeArguments="x:Object">
                     <ActivityAction.Argument>
                       <DelegateInArgument x:TypeArguments="x:Object" Name="CVSessionData" />
                     </ActivityAction.Argument>
-                    <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="602,3353" sap2010:WorkflowViewState.IdRef="Sequence_14">
+                    <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="602,2546" sap2010:WorkflowViewState.IdRef="Sequence_14">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -196,7 +196,7 @@
                                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
-                              <ui:InterruptibleDoWhile DisplayName="Checjking for Int, Null or Whitespaces" sap:VirtualizedContainerService.HintSize="340,408" sap2010:WorkflowViewState.IdRef="InterruptibleDoWhile_2">
+                              <ui:InterruptibleDoWhile DisplayName="Checjking for Int, Null or Whitespaces" sap:VirtualizedContainerService.HintSize="677,408" sap2010:WorkflowViewState.IdRef="InterruptibleDoWhile_2">
                                 <ui:InterruptibleDoWhile.Body>
                                   <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="304,243" sap2010:WorkflowViewState.IdRef="Sequence_5">
                                     <sap:WorkflowViewStateService.ViewState>
@@ -300,6 +300,7 @@
                           </Assign.Value>
                         </Assign>
                       </Sequence>
+                      <s:TextToSpeech DisplayName="Text to speech" sap:VirtualizedContainerService.HintSize="560,22" sap2010:WorkflowViewState.IdRef="TextToSpeech_2" Rate="-20" Text="Web Scraping" Voice="Female" Volume="200" />
                       <p:CvTypeIntoWithDescriptor DeselectAfter="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" sap2010:Annotation.AnnotationText="Type the Application to be opened in the Remote Machine" ClickBeforeTyping="True" Descriptor="[&quot;Target: InputBox (117,964,462,51)&quot;]" DesignTimeCacheId="6bc43494-340d-421d-b966-4b240f0729f5" DesignTimeScaleFactor="1" DisplayName="CV Type Into - InputBox" EmptyField="True" sap:VirtualizedContainerService.HintSize="560,206" sap2010:WorkflowViewState.IdRef="CvTypeIntoWithDescriptor_1" InformativeScreenshot="9ef65c63fbb0fec732697859d309f3ac" Text="[&quot;Google Chrome[k(enter)]&quot;]" Version="V2">
                         <p:CvTypeIntoWithDescriptor.DesignTimeDescriptor>
                           <uc:CvDescriptor>
@@ -324,7 +325,18 @@
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
                       </p:CvTypeIntoWithDescriptor>
-                      <Delay Duration="00:00:05" sap:VirtualizedContainerService.HintSize="560,22" sap2010:WorkflowViewState.IdRef="Delay_2" />
+                      <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="560,192" sap2010:WorkflowViewState.IdRef="CommentOut_7">
+                        <ui:CommentOut.Body>
+                          <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="242,114" sap2010:WorkflowViewState.IdRef="Sequence_36">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                            <Delay Duration="00:00:05" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="Delay_2" />
+                          </Sequence>
+                        </ui:CommentOut.Body>
+                      </ui:CommentOut>
                       <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" DisplayName="Send Hotkey" sap:VirtualizedContainerService.HintSize="560,116" sap2010:WorkflowViewState.IdRef="SendHotkey_6" Key="up" KeyModifiers="Win" SpecialKey="True">
                         <ui:SendHotkey.Target>
                           <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" Id="1249b0b4-4a66-4ada-a7b7-03313a2e5472">
@@ -376,103 +388,120 @@
                               <ActivityAction.Argument>
                                 <DelegateInArgument x:TypeArguments="uc:ElementNotFoundException" Name="exception" />
                               </ActivityAction.Argument>
-                              <Sequence sap:VirtualizedContainerService.HintSize="498,1510" sap2010:WorkflowViewState.IdRef="Sequence_9">
+                              <Sequence sap:VirtualizedContainerService.HintSize="576,614" sap2010:WorkflowViewState.IdRef="Sequence_9">
                                 <sap:WorkflowViewStateService.ViewState>
                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                   </scg:Dictionary>
                                 </sap:WorkflowViewStateService.ViewState>
-                                <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="456,1223" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+                                <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="534,287" sap2010:WorkflowViewState.IdRef="TryCatch_1">
                                   <TryCatch.Try>
-                                    <ui:RetryScope sap2010:Annotation.AnnotationText="If the Browser is not opened or delayed, then try to open for 2 times else Terminate the Program" DisplayName="Retry Scope - Retry to Open the Browser" sap:VirtualizedContainerService.HintSize="418,996" sap2010:WorkflowViewState.IdRef="RetryScope_1" NumberOfRetries="2" RetryInterval="00:00:05">
-                                      <ui:RetryScope.ActivityBody>
-                                        <ActivityAction>
-                                          <Sequence DisplayName="Action" sap:VirtualizedContainerService.HintSize="376,628" sap2010:WorkflowViewState.IdRef="Sequence_7">
-                                            <sap:WorkflowViewStateService.ViewState>
-                                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                              </scg:Dictionary>
-                                            </sap:WorkflowViewStateService.ViewState>
-                                            <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" DisplayName="Message Box - Browser UpLoading" sap:VirtualizedContainerService.HintSize="334,59" sap2010:WorkflowViewState.IdRef="MessageBox_3" Text="[&quot;Waiting for Browser to Upload&quot;]" />
-                                            <Assign sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_5">
-                                              <Assign.To>
-                                                <OutArgument x:TypeArguments="x:String">[systemException]</OutArgument>
-                                              </Assign.To>
-                                              <Assign.Value>
-                                                <InArgument x:TypeArguments="x:String">[Exception.Message]</InArgument>
-                                              </Assign.Value>
-                                            </Assign>
-                                            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,91" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Trace" Message="[&quot;Waiting for Browser to Upload&quot;]" />
-                                            <p:CvTypeIntoWithDescriptor DeselectAfter="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" sap2010:Annotation.AnnotationText="Type the Application to be opened in the Remote Machine" ClickBeforeTyping="True" Descriptor="[&quot;Target: InputBox (100,651,317,38)&quot;]" DesignTimeCacheId="0f94afca-25c1-48ce-a204-1f931a323ccf" DesignTimeScaleFactor="1" DisplayName="Type the Application" EmptyField="True" sap:VirtualizedContainerService.HintSize="334,206" sap2010:WorkflowViewState.IdRef="CvTypeIntoWithDescriptor_3" InformativeScreenshot="7c02cac1d802b4833ce5342f07dc3577" Text="[&quot;Google Chrome[k(enter)]&quot;]" Version="V2">
-                                              <p:CvTypeIntoWithDescriptor.DesignTimeDescriptor>
-                                                <uc:CvDescriptor>
-                                                  <uc:CvDescriptor.Target>
-                                                    <uc:CvElementDescriptor DesignTimeArea="100, 651, 317, 38" ElementType="InputBox" />
-                                                  </uc:CvDescriptor.Target>
-                                                </uc:CvDescriptor>
-                                              </p:CvTypeIntoWithDescriptor.DesignTimeDescriptor>
-                                              <p:CvTypeIntoWithDescriptor.Target>
-                                                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" Id="c50cccaa-44e2-457e-8fd0-13d5d10dbe33">
-                                                  <ui:Target.TimeoutMS>
-                                                    <InArgument x:TypeArguments="x:Int32" />
-                                                  </ui:Target.TimeoutMS>
-                                                  <ui:Target.WaitForReady>
-                                                    <InArgument x:TypeArguments="ui:WaitForReady" />
-                                                  </ui:Target.WaitForReady>
-                                                </ui:Target>
-                                              </p:CvTypeIntoWithDescriptor.Target>
-                                              <sap:WorkflowViewStateService.ViewState>
-                                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                  <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
-                                                </scg:Dictionary>
-                                              </sap:WorkflowViewStateService.ViewState>
-                                            </p:CvTypeIntoWithDescriptor>
-                                          </Sequence>
-                                        </ActivityAction>
-                                      </ui:RetryScope.ActivityBody>
-                                      <ui:RetryScope.Condition>
-                                        <ActivityFunc x:TypeArguments="x:Boolean">
-                                          <p:CvElementExistsWithDescriptor sap2010:Annotation.AnnotationText="Checking for the Element Search Input Box" Descriptor="[&quot;Target: InputBox (433,354,495,43)&quot; +&#xA;&quot;Anchor: Text 'Soogle' (547,238,251,85)&quot;]" DesignTimeCacheId="d6357305-229a-4fe3-bf37-07f8ef03355c" DesignTimeScaleFactor="1" DisplayName="Element Exixts - Search InputBox" sap:VirtualizedContainerService.HintSize="334,167" sap2010:WorkflowViewState.IdRef="CvElementExistsWithDescriptor_1" InformativeScreenshot="a0eeb0b41efbbde3e908531c016bab32" Version="V2">
-                                            <p:CvElementExistsWithDescriptor.DesignTimeDescriptor>
-                                              <uc:CvDescriptor>
-                                                <uc:CvDescriptor.Anchors>
-                                                  <x:Array Type="uc:CvElementDescriptor">
-                                                    <uc:CvElementDescriptor DesignTimeArea="547, 238, 251, 85" ElementType="Text" Text="Soogle" />
-                                                  </x:Array>
-                                                </uc:CvDescriptor.Anchors>
-                                                <uc:CvDescriptor.Target>
-                                                  <uc:CvElementDescriptor DesignTimeArea="433, 354, 495, 43" ElementType="InputBox" />
-                                                </uc:CvDescriptor.Target>
-                                              </uc:CvDescriptor>
-                                            </p:CvElementExistsWithDescriptor.DesignTimeDescriptor>
+                                    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="CommentOut_8">
+                                      <ui:CommentOut.Body>
+                                        <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="460,1088" sap2010:WorkflowViewState.IdRef="Sequence_37">
+                                          <sap:WorkflowViewStateService.ViewState>
+                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                            </scg:Dictionary>
+                                          </sap:WorkflowViewStateService.ViewState>
+                                          <ui:RetryScope sap2010:Annotation.AnnotationText="If the Browser is not opened or delayed, then try to open for 2 times else Terminate the Program" DisplayName="Retry Scope - Retry to Open the Browser" sap:VirtualizedContainerService.HintSize="418,996" sap2010:WorkflowViewState.IdRef="RetryScope_1" NumberOfRetries="2" RetryInterval="00:00:05">
+                                            <ui:RetryScope.ActivityBody>
+                                              <ActivityAction>
+                                                <Sequence DisplayName="Action" sap:VirtualizedContainerService.HintSize="376,628" sap2010:WorkflowViewState.IdRef="Sequence_7">
+                                                  <sap:WorkflowViewStateService.ViewState>
+                                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                    </scg:Dictionary>
+                                                  </sap:WorkflowViewStateService.ViewState>
+                                                  <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" DisplayName="Message Box - Browser UpLoading" sap:VirtualizedContainerService.HintSize="334,59" sap2010:WorkflowViewState.IdRef="MessageBox_3" Text="[&quot;Waiting for Browser to Upload&quot;]" />
+                                                  <Assign sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_5">
+                                                    <Assign.To>
+                                                      <OutArgument x:TypeArguments="x:String">[systemException]</OutArgument>
+                                                    </Assign.To>
+                                                    <Assign.Value>
+                                                      <InArgument x:TypeArguments="x:String">[Exception.Message]</InArgument>
+                                                    </Assign.Value>
+                                                  </Assign>
+                                                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,91" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Trace" Message="[&quot;Waiting for Browser to Upload&quot;]" />
+                                                  <p:CvTypeIntoWithDescriptor DeselectAfter="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" sap2010:Annotation.AnnotationText="Type the Application to be opened in the Remote Machine" ClickBeforeTyping="True" Descriptor="[&quot;Target: InputBox (100,651,317,38)&quot;]" DesignTimeCacheId="0f94afca-25c1-48ce-a204-1f931a323ccf" DesignTimeScaleFactor="1" DisplayName="Type the Application" EmptyField="True" sap:VirtualizedContainerService.HintSize="334,206" sap2010:WorkflowViewState.IdRef="CvTypeIntoWithDescriptor_3" InformativeScreenshot="7c02cac1d802b4833ce5342f07dc3577" Text="[&quot;Google Chrome[k(enter)]&quot;]" Version="V2">
+                                                    <p:CvTypeIntoWithDescriptor.DesignTimeDescriptor>
+                                                      <uc:CvDescriptor>
+                                                        <uc:CvDescriptor.Target>
+                                                          <uc:CvElementDescriptor DesignTimeArea="100, 651, 317, 38" ElementType="InputBox" />
+                                                        </uc:CvDescriptor.Target>
+                                                      </uc:CvDescriptor>
+                                                    </p:CvTypeIntoWithDescriptor.DesignTimeDescriptor>
+                                                    <p:CvTypeIntoWithDescriptor.Target>
+                                                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" Id="c50cccaa-44e2-457e-8fd0-13d5d10dbe33">
+                                                        <ui:Target.TimeoutMS>
+                                                          <InArgument x:TypeArguments="x:Int32" />
+                                                        </ui:Target.TimeoutMS>
+                                                        <ui:Target.WaitForReady>
+                                                          <InArgument x:TypeArguments="ui:WaitForReady" />
+                                                        </ui:Target.WaitForReady>
+                                                      </ui:Target>
+                                                    </p:CvTypeIntoWithDescriptor.Target>
+                                                    <sap:WorkflowViewStateService.ViewState>
+                                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                        <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                                      </scg:Dictionary>
+                                                    </sap:WorkflowViewStateService.ViewState>
+                                                  </p:CvTypeIntoWithDescriptor>
+                                                </Sequence>
+                                              </ActivityAction>
+                                            </ui:RetryScope.ActivityBody>
+                                            <ui:RetryScope.Condition>
+                                              <ActivityFunc x:TypeArguments="x:Boolean">
+                                                <p:CvElementExistsWithDescriptor sap2010:Annotation.AnnotationText="Checking for the Element Search Input Box" Descriptor="[&quot;Target: InputBox (433,354,495,43)&quot; +&#xA;&quot;Anchor: Text 'Soogle' (547,238,251,85)&quot;]" DesignTimeCacheId="d6357305-229a-4fe3-bf37-07f8ef03355c" DesignTimeScaleFactor="1" DisplayName="Element Exixts - Search InputBox" sap:VirtualizedContainerService.HintSize="334,167" sap2010:WorkflowViewState.IdRef="CvElementExistsWithDescriptor_1" InformativeScreenshot="a0eeb0b41efbbde3e908531c016bab32" Version="V2">
+                                                  <p:CvElementExistsWithDescriptor.DesignTimeDescriptor>
+                                                    <uc:CvDescriptor>
+                                                      <uc:CvDescriptor.Anchors>
+                                                        <x:Array Type="uc:CvElementDescriptor">
+                                                          <uc:CvElementDescriptor DesignTimeArea="547, 238, 251, 85" ElementType="Text" Text="Soogle" />
+                                                        </x:Array>
+                                                      </uc:CvDescriptor.Anchors>
+                                                      <uc:CvDescriptor.Target>
+                                                        <uc:CvElementDescriptor DesignTimeArea="433, 354, 495, 43" ElementType="InputBox" />
+                                                      </uc:CvDescriptor.Target>
+                                                    </uc:CvDescriptor>
+                                                  </p:CvElementExistsWithDescriptor.DesignTimeDescriptor>
+                                                  <sap:WorkflowViewStateService.ViewState>
+                                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                      <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                                    </scg:Dictionary>
+                                                  </sap:WorkflowViewStateService.ViewState>
+                                                </p:CvElementExistsWithDescriptor>
+                                              </ActivityFunc>
+                                            </ui:RetryScope.Condition>
                                             <sap:WorkflowViewStateService.ViewState>
                                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                 <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
                                               </scg:Dictionary>
                                             </sap:WorkflowViewStateService.ViewState>
-                                          </p:CvElementExistsWithDescriptor>
-                                        </ActivityFunc>
-                                      </ui:RetryScope.Condition>
-                                      <sap:WorkflowViewStateService.ViewState>
-                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
-                                        </scg:Dictionary>
-                                      </sap:WorkflowViewStateService.ViewState>
-                                    </ui:RetryScope>
-                                  </TryCatch.Try>
-                                  <TryCatch.Catches>
-                                    <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="422,21" sap2010:WorkflowViewState.IdRef="Catch`1_1">
+                                          </ui:RetryScope>
+                                        </Sequence>
+                                      </ui:CommentOut.Body>
                                       <sap:WorkflowViewStateService.ViewState>
                                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                           <x:Boolean x:Key="IsExpanded">False</x:Boolean>
                                           <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                         </scg:Dictionary>
                                       </sap:WorkflowViewStateService.ViewState>
-                                      <ActivityAction x:TypeArguments="s:Exception">
+                                    </ui:CommentOut>
+                                  </TryCatch.Try>
+                                  <TryCatch.Catches>
+                                    <Catch x:TypeArguments="s1:Exception" sap:VirtualizedContainerService.HintSize="404,21" sap2010:WorkflowViewState.IdRef="Catch`1_1">
+                                      <sap:WorkflowViewStateService.ViewState>
+                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                        </scg:Dictionary>
+                                      </sap:WorkflowViewStateService.ViewState>
+                                      <ActivityAction x:TypeArguments="s1:Exception">
                                         <ActivityAction.Argument>
-                                          <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
+                                          <DelegateInArgument x:TypeArguments="s1:Exception" Name="exception" />
                                         </ActivityAction.Argument>
-                                        <Sequence DisplayName="Exception is Caught - Terminate the Program" sap:VirtualizedContainerService.HintSize="376,501" sap2010:WorkflowViewState.IdRef="Sequence_8">
+                                        <Sequence DisplayName="Exception is Caught - Terminate the Program" sap:VirtualizedContainerService.HintSize="376,500" sap2010:WorkflowViewState.IdRef="Sequence_8">
                                           <sap:WorkflowViewStateService.ViewState>
                                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -506,7 +535,7 @@
                                     </Catch>
                                   </TryCatch.Catches>
                                 </TryCatch>
-                                <p:CvTypeIntoWithDescriptor DeselectAfter="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" sap2010:Annotation.AnnotationText="Type the Data to be searched into the Search Window" ClickBeforeTyping="True" Descriptor="[&quot;Target: Text 'Search Google or type a URL' (467,366,192,19)&quot;]" DesignTimeCacheId="d6357305-229a-4fe3-bf37-07f8ef03355c" DesignTimeScaleFactor="1" DisplayName="Type the Input Data" EmptyField="True" sap:VirtualizedContainerService.HintSize="456,195" sap2010:WorkflowViewState.IdRef="CvTypeIntoWithDescriptor_4" InformativeScreenshot="846cc70e62a64e9ae20ea5a354577a90" Text="[in_searchInput + &quot;[k(enter)]&quot;]" Version="V2">
+                                <p:CvTypeIntoWithDescriptor DeselectAfter="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" sap2010:Annotation.AnnotationText="Type the Data to be searched into the Search Window" ClickBeforeTyping="True" Descriptor="[&quot;Target: Text 'Search Google or type a URL' (467,366,192,19)&quot;]" DesignTimeCacheId="d6357305-229a-4fe3-bf37-07f8ef03355c" DesignTimeScaleFactor="1" DisplayName="Type the Input Data" EmptyField="True" sap:VirtualizedContainerService.HintSize="534,195" sap2010:WorkflowViewState.IdRef="CvTypeIntoWithDescriptor_4" InformativeScreenshot="846cc70e62a64e9ae20ea5a354577a90" Text="[in_searchInput + &quot;[k(enter)]&quot;]" Version="V2">
                                   <p:CvTypeIntoWithDescriptor.DesignTimeDescriptor>
                                     <uc:CvDescriptor>
                                       <uc:CvDescriptor.Target>
@@ -535,7 +564,7 @@
                           </Catch>
                         </TryCatch.Catches>
                       </TryCatch>
-                      <Sequence DisplayName="Extract  Data" sap:VirtualizedContainerService.HintSize="560,1235" sap2010:WorkflowViewState.IdRef="Sequence_18">
+                      <Sequence DisplayName="Extract  Data" sap:VirtualizedContainerService.HintSize="560,1195" sap2010:WorkflowViewState.IdRef="Sequence_18">
                         <Sequence.Variables>
                           <Variable x:TypeArguments="x:Boolean" Name="boolLink" />
                           <Variable x:TypeArguments="x:String" Name="variable1" />
@@ -545,23 +574,22 @@
                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
-                        <TryCatch DisplayName="Try Catch - Search Wimdow Not Dispalyed" sap:VirtualizedContainerService.HintSize="518,1042" sap2010:WorkflowViewState.IdRef="TryCatch_6">
+                        <TryCatch DisplayName="Try Catch - Search Wimdow Not Dispalyed" sap:VirtualizedContainerService.HintSize="518,1002" sap2010:WorkflowViewState.IdRef="TryCatch_6">
                           <TryCatch.Try>
-                            <Sequence sap:VirtualizedContainerService.HintSize="480,815" sap2010:WorkflowViewState.IdRef="Sequence_19">
+                            <Sequence sap:VirtualizedContainerService.HintSize="480,753" sap2010:WorkflowViewState.IdRef="Sequence_19">
                               <sap:WorkflowViewStateService.ViewState>
                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
-                              <TryCatch DisplayName="Try Catch - News Window Not Displayed" sap:VirtualizedContainerService.HintSize="438,723" sap2010:WorkflowViewState.IdRef="TryCatch_8">
+                              <TryCatch DisplayName="Try Catch - News Window Not Displayed" sap:VirtualizedContainerService.HintSize="438,661" sap2010:WorkflowViewState.IdRef="TryCatch_8">
                                 <TryCatch.Try>
-                                  <Sequence sap:VirtualizedContainerService.HintSize="376,496" sap2010:WorkflowViewState.IdRef="Sequence_35">
+                                  <Sequence sap:VirtualizedContainerService.HintSize="376,434" sap2010:WorkflowViewState.IdRef="Sequence_35">
                                     <sap:WorkflowViewStateService.ViewState>
                                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                       </scg:Dictionary>
                                     </sap:WorkflowViewStateService.ViewState>
-                                    <s1:TextToSpeech DisplayName="Text to speech" sap:VirtualizedContainerService.HintSize="334,22" sap2010:WorkflowViewState.IdRef="TextToSpeech_1" Rate="-20" Text="Web Scraping" Voice="Female" Volume="200" />
                                     <p:CvClickWithDescriptor CursorMotionType="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" Descriptor="[&quot;Target: Image (236,159,43,21)&quot;]" DesignTimeCacheId="837fdf2f-9db1-4db3-b902-9baab8d24c72" DesignTimeScaleFactor="1" DisplayName="CV Click - Image" sap:VirtualizedContainerService.HintSize="334,136" sap2010:WorkflowViewState.IdRef="CvClickWithDescriptor_3" InformativeScreenshot="7063794d894d24bfa6921872e65d38ae" KeyModifiers="None" MouseButton="BTN_LEFT" Version="V2">
                                       <p:CvClickWithDescriptor.CursorPosition>
                                         <ui:CursorPosition Position="Center">
@@ -614,24 +642,41 @@
                                       <ActivityAction.Argument>
                                         <DelegateInArgument x:TypeArguments="uc:ElementNotFoundException" Name="exception" />
                                       </ActivityAction.Argument>
-                                      <Sequence sap2010:Annotation.AnnotationText="If expected Data not shown , then asks the user to give the Input again" sap:VirtualizedContainerService.HintSize="376,392" sap2010:WorkflowViewState.IdRef="Sequence_27">
+                                      <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="454,51" sap2010:WorkflowViewState.IdRef="CommentOut_9">
+                                        <ui:CommentOut.Body>
+                                          <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="418,484" sap2010:WorkflowViewState.IdRef="Sequence_38">
+                                            <sap:WorkflowViewStateService.ViewState>
+                                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                              </scg:Dictionary>
+                                            </sap:WorkflowViewStateService.ViewState>
+                                            <Sequence sap2010:Annotation.AnnotationText="If expected Data not shown , then asks the user to give the Input again" sap:VirtualizedContainerService.HintSize="376,392" sap2010:WorkflowViewState.IdRef="Sequence_27">
+                                              <sap:WorkflowViewStateService.ViewState>
+                                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                  <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                                </scg:Dictionary>
+                                              </sap:WorkflowViewStateService.ViewState>
+                                              <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" Buttons="Ok" DisplayName="Exception Message" sap:VirtualizedContainerService.HintSize="334,59" sap2010:WorkflowViewState.IdRef="MessageBox_13" Text="[Exception.Message+vbCrLf+&quot;Try Again&quot;]" />
+                                              <Assign sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_15">
+                                                <Assign.To>
+                                                  <OutArgument x:TypeArguments="x:String">[systemException]</OutArgument>
+                                                </Assign.To>
+                                                <Assign.Value>
+                                                  <InArgument x:TypeArguments="x:String">[Exception.Message]</InArgument>
+                                                </Assign.Value>
+                                              </Assign>
+                                              <ui:MessageBox Caption="{x:Null}" Buttons="YesNo" ChosenButton="[continueOk]" DisplayName="Try for another Input" sap:VirtualizedContainerService.HintSize="334,59" sap2010:WorkflowViewState.IdRef="MessageBox_14" Text="[&quot;Do You want to Try Again &quot;]" />
+                                            </Sequence>
+                                          </Sequence>
+                                        </ui:CommentOut.Body>
                                         <sap:WorkflowViewStateService.ViewState>
                                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                            <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                           </scg:Dictionary>
                                         </sap:WorkflowViewStateService.ViewState>
-                                        <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" Buttons="Ok" DisplayName="Exception Message" sap:VirtualizedContainerService.HintSize="334,59" sap2010:WorkflowViewState.IdRef="MessageBox_13" Text="[Exception.Message+vbCrLf+&quot;Try Again&quot;]" />
-                                        <Assign sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_15">
-                                          <Assign.To>
-                                            <OutArgument x:TypeArguments="x:String">[systemException]</OutArgument>
-                                          </Assign.To>
-                                          <Assign.Value>
-                                            <InArgument x:TypeArguments="x:String">[Exception.Message]</InArgument>
-                                          </Assign.Value>
-                                        </Assign>
-                                        <ui:MessageBox Caption="{x:Null}" Buttons="YesNo" ChosenButton="[continueOk]" DisplayName="Try for another Input" sap:VirtualizedContainerService.HintSize="334,59" sap2010:WorkflowViewState.IdRef="MessageBox_14" Text="[&quot;Do You want to Try Again &quot;]" />
-                                      </Sequence>
+                                      </ui:CommentOut>
                                     </ActivityAction>
                                   </Catch>
                                 </TryCatch.Catches>
@@ -650,24 +695,54 @@
                                 <ActivityAction.Argument>
                                   <DelegateInArgument x:TypeArguments="uc:ElementNotFoundException" Name="exception" />
                                 </ActivityAction.Argument>
-                                <Sequence sap2010:Annotation.AnnotationText="If expected Data not shown , then asks the user to give the Input again" sap:VirtualizedContainerService.HintSize="376,392" sap2010:WorkflowViewState.IdRef="Sequence_17">
+                                <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="454,51" sap2010:WorkflowViewState.IdRef="CommentOut_10">
+                                  <ui:CommentOut.Body>
+                                    <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="418,484" sap2010:WorkflowViewState.IdRef="Sequence_39">
+                                      <sap:WorkflowViewStateService.ViewState>
+                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                        </scg:Dictionary>
+                                      </sap:WorkflowViewStateService.ViewState>
+                                      <Sequence sap2010:Annotation.AnnotationText="If expected Data not shown , then asks the user to give the Input again" sap:VirtualizedContainerService.HintSize="376,392" sap2010:WorkflowViewState.IdRef="Sequence_17">
+                                        <sap:WorkflowViewStateService.ViewState>
+                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                            <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                          </scg:Dictionary>
+                                        </sap:WorkflowViewStateService.ViewState>
+                                        <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" Buttons="Ok" DisplayName="Exception Message" sap:VirtualizedContainerService.HintSize="334,59" sap2010:WorkflowViewState.IdRef="MessageBox_9" Text="[Exception.Message+vbCrLf+&quot;Try Again&quot;]" />
+                                        <Assign sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_12">
+                                          <Assign.To>
+                                            <OutArgument x:TypeArguments="x:String">[systemException]</OutArgument>
+                                          </Assign.To>
+                                          <Assign.Value>
+                                            <InArgument x:TypeArguments="x:String">[Exception.Message]</InArgument>
+                                          </Assign.Value>
+                                        </Assign>
+                                        <ui:MessageBox Caption="{x:Null}" Buttons="YesNo" ChosenButton="[continueOk]" DisplayName="Try for another Input" sap:VirtualizedContainerService.HintSize="334,59" sap2010:WorkflowViewState.IdRef="MessageBox_10" Text="[&quot;Do You want to Try Again &quot;]" />
+                                      </Sequence>
+                                    </Sequence>
+                                  </ui:CommentOut.Body>
                                   <sap:WorkflowViewStateService.ViewState>
                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                      <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                     </scg:Dictionary>
                                   </sap:WorkflowViewStateService.ViewState>
-                                  <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" Buttons="Ok" DisplayName="Exception Message" sap:VirtualizedContainerService.HintSize="334,59" sap2010:WorkflowViewState.IdRef="MessageBox_9" Text="[Exception.Message+vbCrLf+&quot;Try Again&quot;]" />
-                                  <Assign sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_12">
-                                    <Assign.To>
-                                      <OutArgument x:TypeArguments="x:String">[systemException]</OutArgument>
-                                    </Assign.To>
-                                    <Assign.Value>
-                                      <InArgument x:TypeArguments="x:String">[Exception.Message]</InArgument>
-                                    </Assign.Value>
-                                  </Assign>
-                                  <ui:MessageBox Caption="{x:Null}" Buttons="YesNo" ChosenButton="[continueOk]" DisplayName="Try for another Input" sap:VirtualizedContainerService.HintSize="334,59" sap2010:WorkflowViewState.IdRef="MessageBox_10" Text="[&quot;Do You want to Try Again &quot;]" />
-                                </Sequence>
+                                </ui:CommentOut>
+                              </ActivityAction>
+                            </Catch>
+                            <Catch x:TypeArguments="s1:Exception" sap:VirtualizedContainerService.HintSize="484,21" sap2010:WorkflowViewState.IdRef="Catch`1_10">
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                              <ActivityAction x:TypeArguments="s1:Exception">
+                                <ActivityAction.Argument>
+                                  <DelegateInArgument x:TypeArguments="s1:Exception" Name="exception" />
+                                </ActivityAction.Argument>
                               </ActivityAction>
                             </Catch>
                           </TryCatch.Catches>
@@ -1730,14 +1805,10 @@
           </ui:Click>
           <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke Workflow File" sap:VirtualizedContainerService.HintSize="334,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="Framework\GetNotePad.xaml">
             <ui:InvokeWorkflowFile.Arguments>
-              <InArgument x:TypeArguments="x:String" x:Key="in_Result">
-                <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="out_webOutput" />
-              </InArgument>
+              <InArgument x:TypeArguments="x:String" x:Key="in_Result">[out_webOutput]</InArgument>
               <InArgument x:TypeArguments="x:Int32" x:Key="in_Tranc" />
               <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="in_Config" />
-              <InArgument x:TypeArguments="x:String" x:Key="in_Var">
-                <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="out_Var" />
-              </InArgument>
+              <InArgument x:TypeArguments="x:String" x:Key="in_Var">[out_Var]</InArgument>
             </ui:InvokeWorkflowFile.Arguments>
           </ui:InvokeWorkflowFile>
         </Sequence>
