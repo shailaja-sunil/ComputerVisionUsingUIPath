@@ -1,4 +1,12 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="SpeechToText" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1391,3918" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:p="http://schemas.uipath.com/workflow/activities/python" xmlns:s="clr-namespace:Speech;assembly=Text-To-Speech" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="SpeechToText" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:p="http://schemas.uipath.com/workflow/activities/python" xmlns:s="clr-namespace:Speech;assembly=Text-To-Speech" xmlns:s1="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="in_Config" Type="InArgument(scg:Dictionary(x:String, x:Object))" />
+  </x:Members>
+  <mva:VisualBasic.Settings>
+    <x:Null />
+  </mva:VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>1286,4609</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="35">
       <x:String>System.Activities</x:String>
@@ -39,7 +47,7 @@
     </scg:List>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
-    <scg:List x:TypeArguments="AssemblyReference" Capacity="38">
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="76">
       <AssemblyReference>System.Activities</AssemblyReference>
       <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
       <AssemblyReference>mscorlib</AssemblyReference>
@@ -78,6 +86,7 @@
       <AssemblyReference>UiPath.GoogleVision.Activities</AssemblyReference>
       <AssemblyReference>UiPath.PDF.Activities</AssemblyReference>
       <AssemblyReference>UiPath.Mail.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
   <sap:WorkflowViewStateService.ViewState>
@@ -85,7 +94,7 @@
       <x:Boolean x:Key="ShouldExpandAll">True</x:Boolean>
     </scg:Dictionary>
   </sap:WorkflowViewStateService.ViewState>
-  <Sequence DisplayName="SpeechToText" sap:VirtualizedContainerService.HintSize="1401,3853" sap2010:WorkflowViewState.IdRef="Sequence_2">
+  <Sequence DisplayName="SpeechToText" sap:VirtualizedContainerService.HintSize="1296,4544" sap2010:WorkflowViewState.IdRef="Sequence_2">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="VoiceInput" />
       <Variable x:TypeArguments="x:Boolean" Name="bool_PresentationStarted" />
@@ -95,13 +104,13 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <p:PythonScope DisplayName="Python Scope" sap:VirtualizedContainerService.HintSize="1359,3761" sap2010:WorkflowViewState.IdRef="PythonScope_1" Path="C:\Program Files\Python36" TargetPlatform="x64" Version="Python_36">
+    <p:PythonScope DisplayName="Python Scope" sap:VirtualizedContainerService.HintSize="1254,4452" sap2010:WorkflowViewState.IdRef="PythonScope_1" Path="C:\Program Files\Python36" TargetPlatform="x64" Version="Python_36">
       <p:PythonScope.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="PythonEngineSessionProperty" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1325,3725" sap2010:WorkflowViewState.IdRef="Sequence_1">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1220,4416" sap2010:WorkflowViewState.IdRef="Sequence_1">
             <Sequence.Variables>
               <Variable x:TypeArguments="p:PythonObject" Name="PythonCode" />
               <Variable x:TypeArguments="p:PythonObject" Name="PythonObject_Out" />
@@ -112,26 +121,9 @@
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="1283,51" sap2010:WorkflowViewState.IdRef="CommentOut_5">
-              <ui:CommentOut.Body>
-                <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="242,114" sap2010:WorkflowViewState.IdRef="Sequence_16">
-                  <sap:WorkflowViewStateService.ViewState>
-                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                    </scg:Dictionary>
-                  </sap:WorkflowViewStateService.ViewState>
-                  <s:TextToSpeech DisplayName="Text to speech" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="TextToSpeech_1" Rate="1" Text=" Hello everyone, I am ready Let me know when you are ready" Voice="Female" Volume="10" />
-                </Sequence>
-              </ui:CommentOut.Body>
-              <sap:WorkflowViewStateService.ViewState>
-                <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                  <x:Boolean x:Key="IsPinned">True</x:Boolean>
-                </scg:Dictionary>
-              </sap:WorkflowViewStateService.ViewState>
-            </ui:CommentOut>
-            <p:LoadScript Code="{x:Null}" DisplayName="Load Python Script" sap:VirtualizedContainerService.HintSize="1283,59" sap2010:WorkflowViewState.IdRef="LoadScript_1" Result="[PythonCode]" ScriptFile="PythonCode.txt" />
-            <While sap:VirtualizedContainerService.HintSize="996,2948" sap2010:WorkflowViewState.IdRef="While_2">
+            <s:TextToSpeech DisplayName="Text to speech" sap:VirtualizedContainerService.HintSize="1178,22" sap2010:WorkflowViewState.IdRef="TextToSpeech_1" Rate="1" Text="Say Hello to wake me up" Voice="Female" Volume="200" />
+            <p:LoadScript Code="{x:Null}" DisplayName="Load Python Script" sap:VirtualizedContainerService.HintSize="1178,59" sap2010:WorkflowViewState.IdRef="LoadScript_1" Result="[PythonCode]" ScriptFile="SpeechToText\PythonCode.py" />
+            <While sap:VirtualizedContainerService.HintSize="1178,4163" sap2010:WorkflowViewState.IdRef="While_2">
               <While.Variables>
                 <Variable x:TypeArguments="x:Boolean" Default="False" Name="breakthis" />
               </While.Variables>
@@ -144,15 +136,15 @@
               <While.Condition>
                 <mva:VisualBasicValue x:TypeArguments="x:Boolean" ExpressionText="breakthis = False" sap2010:WorkflowViewState.IdRef="VisualBasicValue`1_2" />
               </While.Condition>
-              <Sequence sap:VirtualizedContainerService.HintSize="950,2790" sap2010:WorkflowViewState.IdRef="Sequence_3">
+              <Sequence sap:VirtualizedContainerService.HintSize="1132,4006" sap2010:WorkflowViewState.IdRef="Sequence_3">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
-                <ui:Beep sap:VirtualizedContainerService.HintSize="908,22" sap2010:WorkflowViewState.IdRef="Beep_1" />
-                <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="908,91" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Error" Message="[&quot;Bot Listening&quot;]" />
-                <If Condition="[bool_PresentationStarted]" sap:VirtualizedContainerService.HintSize="908,254" sap2010:WorkflowViewState.IdRef="If_1">
+                <ui:Beep sap:VirtualizedContainerService.HintSize="1090,22" sap2010:WorkflowViewState.IdRef="Beep_1" />
+                <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="1090,91" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Error" Message="[&quot;Bot Listening&quot;]" />
+                <If Condition="[bool_PresentationStarted]" sap:VirtualizedContainerService.HintSize="1090,253" sap2010:WorkflowViewState.IdRef="If_1">
                   <If.Then>
                     <ui:Callout Content="listening" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="Callout_3" Timer="50" Title="Bot">
                       <ui:Callout.Target>
@@ -165,7 +157,7 @@
                     </ui:Callout>
                   </If.Then>
                 </If>
-                <Assign sap:VirtualizedContainerService.HintSize="908,60" sap2010:WorkflowViewState.IdRef="Assign_3">
+                <Assign sap:VirtualizedContainerService.HintSize="1090,60" sap2010:WorkflowViewState.IdRef="Assign_3">
                   <Assign.To>
                     <OutArgument x:TypeArguments="x:String">[VoiceInput]</OutArgument>
                   </Assign.To>
@@ -175,188 +167,182 @@
                     </InArgument>
                   </Assign.Value>
                 </Assign>
-                <p:InvokeMethod Parameters="{x:Null}" DisplayName="Invoke Python Method" sap:VirtualizedContainerService.HintSize="908,22" sap2010:WorkflowViewState.IdRef="InvokeMethod_1" Instance="[PythonCode]" Name="SpeechToText" Result="[PythonObject_Out]" />
-                <p:GetObject x:TypeArguments="x:String" DisplayName="Get Python Object" sap:VirtualizedContainerService.HintSize="908,22" sap2010:WorkflowViewState.IdRef="GetObject`1_1" PythonObject="[PythonObject_Out]" Result="[VoiceInput]" />
-                <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="908,61" sap2010:WorkflowViewState.IdRef="WriteLine_2" Text="[VoiceInput]" />
-                <If Condition="[VoiceInput=&quot;hello&quot;]" sap:VirtualizedContainerService.HintSize="908,1886" sap2010:WorkflowViewState.IdRef="If_3">
+                <p:InvokeMethod Parameters="{x:Null}" DisplayName="Invoke Python Method" sap:VirtualizedContainerService.HintSize="1090,22" sap2010:WorkflowViewState.IdRef="InvokeMethod_1" Instance="[PythonCode]" Name="SpeechToText" Result="[PythonObject_Out]" />
+                <p:GetObject x:TypeArguments="x:String" DisplayName="Get Python Object" sap:VirtualizedContainerService.HintSize="1090,22" sap2010:WorkflowViewState.IdRef="GetObject`1_1" PythonObject="[PythonObject_Out]" Result="[VoiceInput]" />
+                <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="1090,61" sap2010:WorkflowViewState.IdRef="WriteLine_2" Text="[VoiceInput]" />
+                <If Condition="[VoiceInput=&quot;hello&quot;]" sap:VirtualizedContainerService.HintSize="1090,3103" sap2010:WorkflowViewState.IdRef="If_3">
                   <If.Then>
-                    <Sequence sap:VirtualizedContainerService.HintSize="663,1738" sap2010:WorkflowViewState.IdRef="Sequence_17">
+                    <Sequence sap:VirtualizedContainerService.HintSize="845,2956" sap2010:WorkflowViewState.IdRef="Sequence_17">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
-                      <s:TextToSpeech DisplayName="Text to speech" sap:VirtualizedContainerService.HintSize="621,22" sap2010:WorkflowViewState.IdRef="TextToSpeech_9" Rate="0" Text="Hello i am voice assistant, how may i help you" Voice="Female" Volume="200" />
-                      <Assign sap:VirtualizedContainerService.HintSize="621,60" sap2010:WorkflowViewState.IdRef="Assign_4">
-                        <Assign.To>
-                          <OutArgument x:TypeArguments="x:String">[VoiceInput]</OutArgument>
-                        </Assign.To>
-                        <Assign.Value>
-                          <InArgument x:TypeArguments="x:String">
-                            <Literal x:TypeArguments="x:String" Value="" />
-                          </InArgument>
-                        </Assign.Value>
-                      </Assign>
-                      <ui:Beep sap:VirtualizedContainerService.HintSize="621,22" sap2010:WorkflowViewState.IdRef="Beep_2" />
-                      <p:InvokeMethod Parameters="{x:Null}" DisplayName="Invoke Python Method" sap:VirtualizedContainerService.HintSize="621,22" sap2010:WorkflowViewState.IdRef="InvokeMethod_4" Instance="[PythonCode]" Name="SpeechToText" Result="[PythonObject_Out]" />
-                      <p:GetObject x:TypeArguments="x:String" DisplayName="Get Python Object" sap:VirtualizedContainerService.HintSize="621,22" sap2010:WorkflowViewState.IdRef="GetObject`1_4" PythonObject="[PythonObject_Out]" Result="[VoiceInput]" />
-                      <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="621,61" sap2010:WorkflowViewState.IdRef="WriteLine_4" Text="[VoiceInput]" />
-                      <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="621,51" sap2010:WorkflowViewState.IdRef="CommentOut_8">
-                        <ui:CommentOut.Body>
-                          <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="591,639" sap2010:WorkflowViewState.IdRef="Sequence_21">
+                      <s:TextToSpeech DisplayName="Text to speech" sap:VirtualizedContainerService.HintSize="803,22" sap2010:WorkflowViewState.IdRef="TextToSpeech_9" Rate="0" Text="Hello i am voice assistant, I can perfome following actions using computer vision.&#xA;    • Sending Authentication Request From the Local  Machine To the Remote Machine For Server Connectivity .&#xA;    • Authentication Request Approved.&#xA;    • Opening an  Form from remote system and simulate data with web form &#xA;    • Close the connection with the Remote Machine&#xA;&#x9;&#xA;listening" Voice="Female" Volume="200" />
+                      <ui:InterruptibleDoWhile Condition="[breakthis = false]" DisplayName="Do While" sap:VirtualizedContainerService.HintSize="803,1656" sap2010:WorkflowViewState.IdRef="InterruptibleDoWhile_1">
+                        <ui:InterruptibleDoWhile.Body>
+                          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="767,1491" sap2010:WorkflowViewState.IdRef="Sequence_30">
                             <sap:WorkflowViewStateService.ViewState>
                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                               </scg:Dictionary>
                             </sap:WorkflowViewStateService.ViewState>
-                            <If Condition="[VoiceInput= &quot;what is your name&quot;]" sap:VirtualizedContainerService.HintSize="549,547" sap2010:WorkflowViewState.IdRef="If_4">
-                              <If.Then>
-                                <Sequence sap:VirtualizedContainerService.HintSize="304,400" sap2010:WorkflowViewState.IdRef="Sequence_20">
+                            <Assign sap:VirtualizedContainerService.HintSize="725,60" sap2010:WorkflowViewState.IdRef="Assign_8">
+                              <Assign.To>
+                                <OutArgument x:TypeArguments="x:String">[VoiceInput]</OutArgument>
+                              </Assign.To>
+                              <Assign.Value>
+                                <InArgument x:TypeArguments="x:String">
+                                  <Literal x:TypeArguments="x:String" Value="" />
+                                </InArgument>
+                              </Assign.Value>
+                            </Assign>
+                            <ui:Beep sap:VirtualizedContainerService.HintSize="725,22" sap2010:WorkflowViewState.IdRef="Beep_5" />
+                            <p:InvokeMethod Parameters="{x:Null}" DisplayName="Invoke Python Method" sap:VirtualizedContainerService.HintSize="725,22" sap2010:WorkflowViewState.IdRef="InvokeMethod_7" Instance="[PythonCode]" Name="SpeechToText" Result="[PythonObject_Out]" />
+                            <p:GetObject x:TypeArguments="x:String" DisplayName="Get Python Object" sap:VirtualizedContainerService.HintSize="725,22" sap2010:WorkflowViewState.IdRef="GetObject`1_7" PythonObject="[PythonObject_Out]" Result="[VoiceInput]" />
+                            <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="725,61" sap2010:WorkflowViewState.IdRef="WriteLine_8" Text="[VoiceInput]" />
+                            <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="725,51" sap2010:WorkflowViewState.IdRef="CommentOut_9">
+                              <ui:CommentOut.Body>
+                                <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="591,639" sap2010:WorkflowViewState.IdRef="Sequence_28">
                                   <sap:WorkflowViewStateService.ViewState>
                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                     </scg:Dictionary>
                                   </sap:WorkflowViewStateService.ViewState>
-                                  <s:TextToSpeech DisplayName="Text to speech" sap:VirtualizedContainerService.HintSize="262,22" sap2010:WorkflowViewState.IdRef="TextToSpeech_11" Rate="0" Text="My name is Alexa. How may i hep you" Voice="Female" Volume="200" />
-                                  <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_5">
+                                  <If Condition="[VoiceInput= &quot;what is your name&quot;]" sap:VirtualizedContainerService.HintSize="549,547" sap2010:WorkflowViewState.IdRef="If_7">
+                                    <If.Then>
+                                      <Sequence sap:VirtualizedContainerService.HintSize="304,400" sap2010:WorkflowViewState.IdRef="Sequence_27">
+                                        <sap:WorkflowViewStateService.ViewState>
+                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                          </scg:Dictionary>
+                                        </sap:WorkflowViewStateService.ViewState>
+                                        <s:TextToSpeech DisplayName="Text to speech" sap:VirtualizedContainerService.HintSize="262,22" sap2010:WorkflowViewState.IdRef="TextToSpeech_19" Rate="0" Text="My name is Alexa. How may i hep you" Voice="Female" Volume="200" />
+                                        <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_9">
+                                          <Assign.To>
+                                            <OutArgument x:TypeArguments="x:String">[VoiceInput]</OutArgument>
+                                          </Assign.To>
+                                          <Assign.Value>
+                                            <InArgument x:TypeArguments="x:String">
+                                              <Literal x:TypeArguments="x:String" Value="" />
+                                            </InArgument>
+                                          </Assign.Value>
+                                        </Assign>
+                                        <ui:Beep sap:VirtualizedContainerService.HintSize="262,22" sap2010:WorkflowViewState.IdRef="Beep_6" />
+                                        <p:InvokeMethod Parameters="{x:Null}" DisplayName="Invoke Python Method" sap:VirtualizedContainerService.HintSize="262,22" sap2010:WorkflowViewState.IdRef="InvokeMethod_8" Instance="[PythonCode]" Name="SpeechToText" Result="[PythonObject_Out]" />
+                                        <p:GetObject x:TypeArguments="x:String" DisplayName="Get Python Object" sap:VirtualizedContainerService.HintSize="262,22" sap2010:WorkflowViewState.IdRef="GetObject`1_8" PythonObject="[PythonObject_Out]" Result="[VoiceInput]" />
+                                      </Sequence>
+                                    </If.Then>
+                                    <If.Else>
+                                      <s:TextToSpeech DisplayName="Text to speech" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="TextToSpeech_20" Rate="-1" Text="[&quot;Sorry did not get that&quot;+VoiceInput]" Voice="Female" Volume="200" />
+                                    </If.Else>
+                                  </If>
+                                </Sequence>
+                              </ui:CommentOut.Body>
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                  <x:Boolean x:Key="IsPinned">True</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                            </ui:CommentOut>
+                            <If Condition="[VoiceInput = &quot;connect&quot;]" sap:VirtualizedContainerService.HintSize="725,921" sap2010:WorkflowViewState.IdRef="If_8">
+                              <If.Then>
+                                <Sequence sap:VirtualizedContainerService.HintSize="480,774" sap2010:WorkflowViewState.IdRef="Sequence_29">
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                  <Assign sap:VirtualizedContainerService.HintSize="438,60" sap2010:WorkflowViewState.IdRef="Assign_10">
                                     <Assign.To>
-                                      <OutArgument x:TypeArguments="x:String">[VoiceInput]</OutArgument>
+                                      <OutArgument x:TypeArguments="x:Boolean">[breakthis]</OutArgument>
                                     </Assign.To>
                                     <Assign.Value>
-                                      <InArgument x:TypeArguments="x:String">
-                                        <Literal x:TypeArguments="x:String" Value="" />
-                                      </InArgument>
+                                      <InArgument x:TypeArguments="x:Boolean">True</InArgument>
                                     </Assign.Value>
                                   </Assign>
-                                  <ui:Beep sap:VirtualizedContainerService.HintSize="262,22" sap2010:WorkflowViewState.IdRef="Beep_3" />
-                                  <p:InvokeMethod Parameters="{x:Null}" DisplayName="Invoke Python Method" sap:VirtualizedContainerService.HintSize="262,22" sap2010:WorkflowViewState.IdRef="InvokeMethod_5" Instance="[PythonCode]" Name="SpeechToText" Result="[PythonObject_Out]" />
-                                  <p:GetObject x:TypeArguments="x:String" DisplayName="Get Python Object" sap:VirtualizedContainerService.HintSize="262,22" sap2010:WorkflowViewState.IdRef="GetObject`1_5" PythonObject="[PythonObject_Out]" Result="[VoiceInput]" />
+                                  <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="438,582" sap2010:WorkflowViewState.IdRef="TryCatch_2">
+                                    <TryCatch.Try>
+                                      <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke Workflow File" sap:VirtualizedContainerService.HintSize="334,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" Timeout="00:00:00" UnSafe="False" WorkflowFileName="Framework\VNC_Client.xaml">
+                                        <ui:InvokeWorkflowFile.Arguments>
+                                          <InArgument x:TypeArguments="x:String" x:Key="in_Config">[in_Config("Password").ToString]</InArgument>
+                                        </ui:InvokeWorkflowFile.Arguments>
+                                      </ui:InvokeWorkflowFile>
+                                    </TryCatch.Try>
+                                    <TryCatch.Catches>
+                                      <Catch x:TypeArguments="s1:Exception" sap:VirtualizedContainerService.HintSize="404,160" sap2010:WorkflowViewState.IdRef="Catch`1_2">
+                                        <sap:WorkflowViewStateService.ViewState>
+                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                          </scg:Dictionary>
+                                        </sap:WorkflowViewStateService.ViewState>
+                                        <ActivityAction x:TypeArguments="s1:Exception">
+                                          <ActivityAction.Argument>
+                                            <DelegateInArgument x:TypeArguments="s1:Exception" Name="exception" />
+                                          </ActivityAction.Argument>
+                                          <ui:LogMessage DisplayName="Log Message (initialization failure)" sap:VirtualizedContainerService.HintSize="334,91" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Fatal" Message="[&quot;System exception at initialization: &quot;]" />
+                                        </ActivityAction>
+                                      </Catch>
+                                    </TryCatch.Catches>
+                                  </TryCatch>
                                 </Sequence>
                               </If.Then>
                               <If.Else>
-                                <s:TextToSpeech DisplayName="Text to speech" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="TextToSpeech_12" Rate="-1" Text="[&quot;Sorry did not get that&quot;+VoiceInput]" Voice="Female" Volume="200" />
+                                <s:TextToSpeech DisplayName="Text to speech" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="TextToSpeech_21" Rate="0" Text="Sorry did not get that" Voice="Female" Volume="200" />
                               </If.Else>
                             </If>
                           </Sequence>
-                        </ui:CommentOut.Body>
-                        <sap:WorkflowViewStateService.ViewState>
-                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                            <x:Boolean x:Key="IsPinned">True</x:Boolean>
-                          </scg:Dictionary>
-                        </sap:WorkflowViewStateService.ViewState>
-                      </ui:CommentOut>
-                      <If Condition="[VoiceInput = &quot;fill form&quot;]" sap:VirtualizedContainerService.HintSize="621,1106" sap2010:WorkflowViewState.IdRef="If_5">
-                        <If.Then>
-                          <Sequence sap:VirtualizedContainerService.HintSize="376,958" sap2010:WorkflowViewState.IdRef="Sequence_25">
-                            <Sequence.Variables>
-                              <Variable x:TypeArguments="sd:DataTable" Name="dtReport" />
-                              <Variable x:TypeArguments="x:String" Name="strReport" />
-                              <Variable x:TypeArguments="x:String" Name="Result" />
-                              <Variable x:TypeArguments="x:String" Name="EmailResult" />
-                              <Variable x:TypeArguments="x:String" Name="AddrResult" />
-                              <Variable x:TypeArguments="x:String" Name="PhoneResult" />
-                              <Variable x:TypeArguments="x:String" Name="Comments" />
-                            </Sequence.Variables>
+                        </ui:InterruptibleDoWhile.Body>
+                      </ui:InterruptibleDoWhile>
+                      <Assign sap:VirtualizedContainerService.HintSize="803,60" sap2010:WorkflowViewState.IdRef="Assign_12">
+                        <Assign.To>
+                          <OutArgument x:TypeArguments="x:Boolean">[breakthis]</OutArgument>
+                        </Assign.To>
+                        <Assign.Value>
+                          <InArgument x:TypeArguments="x:Boolean">False</InArgument>
+                        </Assign.Value>
+                      </Assign>
+                      <ui:InterruptibleDoWhile Condition="[breakthis = False]" DisplayName="Do While" sap:VirtualizedContainerService.HintSize="803,1006" sap2010:WorkflowViewState.IdRef="InterruptibleDoWhile_2">
+                        <ui:InterruptibleDoWhile.Body>
+                          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="591,841" sap2010:WorkflowViewState.IdRef="Sequence_32">
                             <sap:WorkflowViewStateService.ViewState>
                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                               </scg:Dictionary>
                             </sap:WorkflowViewStateService.ViewState>
-                            <s:TextToSpeech DisplayName="Text to speech" sap:VirtualizedContainerService.HintSize="334,22" sap2010:WorkflowViewState.IdRef="TextToSpeech_13" Rate="1" Text="Filling the form" Voice="Female" Volume="200" />
-                            <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke PDF TO Webform Filling" sap:VirtualizedContainerService.HintSize="334,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="PdfFormScrapping.xaml">
-                              <ui:InvokeWorkflowFile.Arguments>
-                                <OutArgument x:TypeArguments="x:String" x:Key="out_Result">[Result]</OutArgument>
-                                <OutArgument x:TypeArguments="x:String" x:Key="out_Email">[EmailResult]</OutArgument>
-                                <OutArgument x:TypeArguments="x:String" x:Key="out_Address">[AddrResult]</OutArgument>
-                                <OutArgument x:TypeArguments="x:String" x:Key="out_Phone">[PhoneResult]</OutArgument>
-                                <OutArgument x:TypeArguments="x:String" x:Key="out_Comments">[Comments]</OutArgument>
-                              </ui:InvokeWorkflowFile.Arguments>
-                            </ui:InvokeWorkflowFile>
-                            <s:TextToSpeech DisplayName="Text to speech" sap:VirtualizedContainerService.HintSize="334,22" sap2010:WorkflowViewState.IdRef="TextToSpeech_14" Rate="1" Text="Report Extracted Here are the results" Voice="Female" Volume="10" />
-                            <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="334,51" sap2010:WorkflowViewState.IdRef="CommentOut_9">
-                              <ui:CommentOut.Body>
-                                <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="349,353" sap2010:WorkflowViewState.IdRef="Sequence_23">
+                            <s:TextToSpeech DisplayName="Text to speech" sap:VirtualizedContainerService.HintSize="549,22" sap2010:WorkflowViewState.IdRef="TextToSpeech_22" Rate="0" Text="Listening" Voice="Female" Volume="200" />
+                            <ui:Beep sap:VirtualizedContainerService.HintSize="549,22" sap2010:WorkflowViewState.IdRef="Beep_7" />
+                            <p:InvokeMethod Parameters="{x:Null}" DisplayName="Invoke Python Method" sap:VirtualizedContainerService.HintSize="549,22" sap2010:WorkflowViewState.IdRef="InvokeMethod_9" Instance="[PythonCode]" Name="SpeechToText" Result="[PythonObject_Out]" />
+                            <p:GetObject x:TypeArguments="x:String" DisplayName="Get Python Object" sap:VirtualizedContainerService.HintSize="549,22" sap2010:WorkflowViewState.IdRef="GetObject`1_9" PythonObject="[PythonObject_Out]" Result="[VoiceInput]" />
+                            <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="549,61" sap2010:WorkflowViewState.IdRef="WriteLine_9" Text="[VoiceInput]" />
+                            <If Condition="[VoiceInput = &quot;fill form&quot;]" sap:VirtualizedContainerService.HintSize="549,400" sap2010:WorkflowViewState.IdRef="If_9">
+                              <If.Then>
+                                <Sequence sap:VirtualizedContainerService.HintSize="304,253" sap2010:WorkflowViewState.IdRef="Sequence_31">
                                   <sap:WorkflowViewStateService.ViewState>
                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                     </scg:Dictionary>
                                   </sap:WorkflowViewStateService.ViewState>
-                                  <ui:ForEachRow CurrentIndex="{x:Null}" DataTable="[dtReport]" DisplayName="For Each Row" sap:VirtualizedContainerService.HintSize="307,261" sap2010:WorkflowViewState.IdRef="ForEachRow_2">
-                                    <ui:ForEachRow.Body>
-                                      <ActivityAction x:TypeArguments="sd:DataRow">
-                                        <ActivityAction.Argument>
-                                          <DelegateInArgument x:TypeArguments="sd:DataRow" Name="row" />
-                                        </ActivityAction.Argument>
-                                        <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="242,114" sap2010:WorkflowViewState.IdRef="Sequence_22">
-                                          <sap:WorkflowViewStateService.ViewState>
-                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                            </scg:Dictionary>
-                                          </sap:WorkflowViewStateService.ViewState>
-                                          <s:TextToSpeech DisplayName="Text to speech" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="TextToSpeech_15" Rate="1" Text="[row(0).ToString+&quot;   &quot;+row(1).ToString]" Voice="Female" Volume="10" />
-                                        </Sequence>
-                                      </ActivityAction>
-                                    </ui:ForEachRow.Body>
-                                  </ui:ForEachRow>
+                                  <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_11">
+                                    <Assign.To>
+                                      <OutArgument x:TypeArguments="x:Boolean">[breakthis]</OutArgument>
+                                    </Assign.To>
+                                    <Assign.Value>
+                                      <InArgument x:TypeArguments="x:Boolean">True</InArgument>
+                                    </Assign.Value>
+                                  </Assign>
+                                  <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="262,61" sap2010:WorkflowViewState.IdRef="WriteLine_10" Text="[VoiceInput]" />
                                 </Sequence>
-                              </ui:CommentOut.Body>
-                              <sap:WorkflowViewStateService.ViewState>
-                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                                  <x:Boolean x:Key="IsPinned">True</x:Boolean>
-                                </scg:Dictionary>
-                              </sap:WorkflowViewStateService.ViewState>
-                            </ui:CommentOut>
-                            <s:TextToSpeech DisplayName="Text to speech" sap:VirtualizedContainerService.HintSize="334,22" sap2010:WorkflowViewState.IdRef="TextToSpeech_16" Rate="1" Text="Sending the details over email. thank you" Voice="Female" Volume="10" />
-                            <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="334,51" sap2010:WorkflowViewState.IdRef="CommentOut_10">
-                              <ui:CommentOut.Body>
-                                <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="480,461" sap2010:WorkflowViewState.IdRef="Sequence_24">
-                                  <sap:WorkflowViewStateService.ViewState>
-                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                    </scg:Dictionary>
-                                  </sap:WorkflowViewStateService.ViewState>
-                                  <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="TryCatch_2">
-                                    <sap:WorkflowViewStateService.ViewState>
-                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                                        <x:Boolean x:Key="IsPinned">True</x:Boolean>
-                                      </scg:Dictionary>
-                                    </sap:WorkflowViewStateService.ViewState>
-                                    <TryCatch.Try>
-                                      <ui:OutputDataTable DataTable="[dtReport]" DisplayName="Output Data Table" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="OutputDataTable_2" Text="[strReport]" />
-                                    </TryCatch.Try>
-                                  </TryCatch>
-                                </Sequence>
-                              </ui:CommentOut.Body>
-                              <sap:WorkflowViewStateService.ViewState>
-                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                                  <x:Boolean x:Key="IsPinned">True</x:Boolean>
-                                </scg:Dictionary>
-                              </sap:WorkflowViewStateService.ViewState>
-                            </ui:CommentOut>
-                            <ui:SendOutlookMail Account="{x:Null}" Bcc="{x:Null}" Cc="{x:Null}" MailMessage="{x:Null}" TimeoutMS="{x:Null}" Body="[strReport]" DisplayName="Send Mail Message" sap:VirtualizedContainerService.HintSize="334,145" sap2010:WorkflowViewState.IdRef="SendOutlookMail_2" IsBodyHtml="False" IsDraft="False" Subject="[Now.ToString+ &quot; Bangalore&quot;]" To="sk.shailaja@gmail.com">
-                              <ui:SendOutlookMail.Files>
-                                <scg:List x:TypeArguments="InArgument(x:String)" Capacity="0" />
-                              </ui:SendOutlookMail.Files>
-                            </ui:SendOutlookMail>
-                            <Assign sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_6">
-                              <Assign.To>
-                                <OutArgument x:TypeArguments="x:Boolean">[breakthis]</OutArgument>
-                              </Assign.To>
-                              <Assign.Value>
-                                <InArgument x:TypeArguments="x:Boolean">True</InArgument>
-                              </Assign.Value>
-                            </Assign>
-                            <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="334,61" sap2010:WorkflowViewState.IdRef="WriteLine_5" Text="[VoiceInput]" />
+                              </If.Then>
+                              <If.Else>
+                                <s:TextToSpeech DisplayName="Text to speech" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="TextToSpeech_23" Rate="-1" Text="[&quot;Sorry did not get that&quot;+VoiceInput]" Voice="Female" Volume="200" />
+                              </If.Else>
+                            </If>
                           </Sequence>
-                        </If.Then>
-                        <If.Else>
-                          <s:TextToSpeech DisplayName="Text to speech" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="TextToSpeech_17" Rate="-1" Text="[&quot;Sorry did not get that&quot;+VoiceInput]" Voice="Female" Volume="200" />
-                        </If.Else>
-                      </If>
+                        </ui:InterruptibleDoWhile.Body>
+                      </ui:InterruptibleDoWhile>
                     </Sequence>
                   </If.Then>
                   <If.Else>

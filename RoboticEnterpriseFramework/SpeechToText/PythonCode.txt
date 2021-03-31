@@ -5,7 +5,7 @@ def SpeechToText():
     with sr.Microphone() as source:
         Text= 'Nothing'
         print('say something');
-        audio = r.listen(source,10)
+        audio = r.listen(source,30)
         print('Time over, Thanks')
         try:
             Text = r.recognize_google(audio, language="en-US")
