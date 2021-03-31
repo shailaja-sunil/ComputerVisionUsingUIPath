@@ -93,9 +93,11 @@
         "C:\\Users\\nxf38842\\.nuget\\packages\\google.apis.core/1.49.0\\lib/net45/Google.Apis.Core.dll",
         "C:\\Users\\nxf38842\\.nuget\\packages\\google.apis.vision.v1/1.49.0.2167\\lib/net45/Google.Apis.Vision.v1.dll",
         "C:\\Users\\nxf38842\\.nuget\\packages\\newtonsoft.json/12.0.3\\lib/net45/Newtonsoft.Json.dll",
+        "C:\\Users\\nxf38842\\.nuget\\packages\\system.threading.tasks.dataflow/5.0.0\\lib/net461/System.Threading.Tasks.Dataflow.dll",
         "C:\\Users\\nxf38842\\.nuget\\packages\\uipath.googlevision.activities/1.2.0\\lib/net461/UiPath.GoogleVision.Activities.Design.dll",
         "C:\\Users\\nxf38842\\.nuget\\packages\\uipath.googlevision.activities/1.2.0\\lib/net461/UiPath.GoogleVision.Activities.dll",
-        "C:\\Users\\nxf38842\\.nuget\\packages\\uipath.googlevision.activities/1.2.0\\lib/net461/UiPath.GoogleVision.dll"
+        "C:\\Users\\nxf38842\\.nuget\\packages\\uipath.googlevision.activities/1.2.0\\lib/net461/UiPath.GoogleVision.dll",
+        "C:\\Users\\nxf38842\\.nuget\\packages\\uipath.telemetry.client/1.3.16\\lib/net461/TelemetryClient.dll"
       ],
       "Path": "C:\\Users\\nxf38842\\.nuget\\packages\\uipath.googlevision.activities\\1.2.0"
     },
@@ -261,6 +263,7 @@
         "C:\\Users\\nxf38842\\.nuget\\packages\\nlog/4.5.11\\lib/net45/NLog.dll",
         "C:\\Users\\nxf38842\\.nuget\\packages\\system.collections.immutable/1.5.0\\lib/netstandard2.0/System.Collections.Immutable.dll",
         "C:\\Users\\nxf38842\\.nuget\\packages\\system.io.abstractions/3.0.10\\lib/net40/System.IO.Abstractions.dll",
+        "C:\\Users\\nxf38842\\.nuget\\packages\\system.threading.tasks.dataflow/5.0.0\\lib/net461/System.Threading.Tasks.Dataflow.dll",
         "C:\\Users\\nxf38842\\.nuget\\packages\\system.valuetuple/4.5.0\\lib/net461/System.ValueTuple.dll",
         "C:\\Users\\nxf38842\\.nuget\\packages\\uipath/20.12.7654.25299-preview\\lib/UiPath.Interop.dll",
         "C:\\Users\\nxf38842\\.nuget\\packages\\uipath.ocr.activities/2.4.1\\lib/net461/UiPath.OCR.Activities.Design.dll",
@@ -268,6 +271,7 @@
         "C:\\Users\\nxf38842\\.nuget\\packages\\uipath.ocr.activities/2.4.1\\lib/net461/UiPath.OCR.Core.dll",
         "C:\\Users\\nxf38842\\.nuget\\packages\\uipath.ocr.contracts/2.7.1\\lib/net461/UiPath.OCR.Contracts.dll",
         "C:\\Users\\nxf38842\\.nuget\\packages\\uipath.platform/20.10.4\\lib/net461/UiPath.Platform.dll",
+        "C:\\Users\\nxf38842\\.nuget\\packages\\uipath.telemetry.client/1.3.16\\lib/net461/TelemetryClient.dll",
         "C:\\Users\\nxf38842\\.nuget\\packages\\uipath.uiautomation.activities/20.12.0-preview\\lib/net461/ActiproSoftware.DataGrid.Contrib.Wpf.dll",
         "C:\\Users\\nxf38842\\.nuget\\packages\\uipath.uiautomation.activities/20.12.0-preview\\lib/net461/ActiproSoftware.Docking.Wpf.dll",
         "C:\\Users\\nxf38842\\.nuget\\packages\\uipath.uiautomation.activities/20.12.0-preview\\lib/net461/ActiproSoftware.Editors.Wpf.dll",
@@ -1074,6 +1078,11 @@
         }
       ]
     },
+    "System.Threading.Tasks.Dataflow": {
+      "Id": "System.Threading.Tasks.Dataflow",
+      "Version": "5.0.0",
+      "Dependencies": []
+    },
     "System.Threading.Tasks.Extensions": {
       "Id": "System.Threading.Tasks.Extensions",
       "Version": "4.5.4",
@@ -1337,6 +1346,20 @@
         {
           "Item1": "System.Threading.Tasks.Extensions",
           "Item2": "[4.5.4, )"
+        }
+      ]
+    },
+    "UiPath.Telemetry.Client": {
+      "Id": "UiPath.Telemetry.Client",
+      "Version": "1.3.16",
+      "Dependencies": [
+        {
+          "Item1": "Newtonsoft.Json",
+          "Item2": "[11.0.2, )"
+        },
+        {
+          "Item1": "System.Threading.Tasks.Dataflow",
+          "Item2": "[5.0.0, )"
         }
       ]
     },
@@ -2092,6 +2115,16 @@
     },
     {
       "Package": {
+        "Id": "System.Threading.Tasks.Dataflow",
+        "Version": "5.0.0"
+      },
+      "Assemblies": [
+        "C:\\Users\\nxf38842\\.nuget\\packages\\system.threading.tasks.dataflow\\5.0.0\\lib\\net461\\System.Threading.Tasks.Dataflow.dll"
+      ],
+      "Path": "C:\\Users\\nxf38842\\.nuget\\packages\\system.threading.tasks.dataflow\\5.0.0"
+    },
+    {
+      "Package": {
         "Id": "System.Threading.Tasks.Extensions",
         "Version": "4.5.4"
       },
@@ -2251,6 +2284,16 @@
         "C:\\Users\\nxf38842\\.nuget\\packages\\uipath.system.activities\\20.10.3\\lib\\net461\\UiPath.System.Activities.dll"
       ],
       "Path": "C:\\Users\\nxf38842\\.nuget\\packages\\uipath.system.activities\\20.10.3"
+    },
+    {
+      "Package": {
+        "Id": "UiPath.Telemetry.Client",
+        "Version": "1.3.16"
+      },
+      "Assemblies": [
+        "C:\\Users\\nxf38842\\.nuget\\packages\\uipath.telemetry.client\\1.3.16\\lib\\net461\\TelemetryClient.dll"
+      ],
+      "Path": "C:\\Users\\nxf38842\\.nuget\\packages\\uipath.telemetry.client\\1.3.16"
     },
     {
       "Package": {
