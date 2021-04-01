@@ -1,0 +1,146 @@
+<html>
+<head>
+<title>aud.py</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #cc7832;}
+.s1 { color: #a9b7c6;}
+.s2 { color: #808080;}
+.s3 { color: #6a8759;}
+.s4 { color: #6897bb;}
+</style>
+</head>
+<body bgcolor="#2b2b2b">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+aud.py</font>
+</center></td></tr></table>
+<pre><span class="s0">import </span><span class="s1">speech_recognition </span><span class="s0">as </span><span class="s1">sr </span><span class="s2"># recognise speech</span>
+<span class="s0">import </span><span class="s1">playsound </span><span class="s2"># to play an audio file</span>
+<span class="s0">from </span><span class="s1">gtts </span><span class="s0">import </span><span class="s1">gTTS </span><span class="s2"># google text to speech</span>
+<span class="s0">import </span><span class="s1">random</span>
+<span class="s0">from </span><span class="s1">time </span><span class="s0">import </span><span class="s1">ctime </span><span class="s2"># get time details</span>
+<span class="s0">import </span><span class="s1">webbrowser </span><span class="s2"># open browser</span>
+<span class="s0">import </span><span class="s1">yfinance </span><span class="s0">as </span><span class="s1">yf </span><span class="s2"># to fetch financial data</span>
+<span class="s0">import </span><span class="s1">ssl</span>
+<span class="s0">import </span><span class="s1">certifi</span>
+<span class="s0">import </span><span class="s1">time</span>
+<span class="s0">import </span><span class="s1">os </span><span class="s2"># to remove created audio files</span>
+
+<span class="s0">class </span><span class="s1">person:</span>
+    <span class="s1">name = </span><span class="s3">''</span>
+    <span class="s0">def </span><span class="s1">setName(self</span><span class="s0">, </span><span class="s1">name):</span>
+        <span class="s1">self.name = name</span>
+
+<span class="s0">def </span><span class="s1">there_exists(terms):</span>
+    <span class="s0">for </span><span class="s1">term </span><span class="s0">in </span><span class="s1">terms:</span>
+        <span class="s0">if </span><span class="s1">term </span><span class="s0">in </span><span class="s1">voice_data:</span>
+            <span class="s0">return True</span>
+
+<span class="s1">r = sr.Recognizer() </span><span class="s2"># initialise a recogniser</span>
+<span class="s2"># listen for audio and convert it to text:</span>
+<span class="s0">def </span><span class="s1">record_audio(ask=</span><span class="s0">False</span><span class="s1">):</span>
+    <span class="s0">with </span><span class="s1">sr.Microphone() </span><span class="s0">as </span><span class="s1">source: </span><span class="s2"># microphone as source</span>
+        <span class="s0">if </span><span class="s1">ask:</span>
+            <span class="s1">speak(ask)</span>
+        <span class="s1">audio = r.listen(source)  </span><span class="s2"># listen for the audio via source</span>
+        <span class="s1">voice_data = </span><span class="s3">''</span>
+        <span class="s0">try</span><span class="s1">:</span>
+            <span class="s1">voice_data = r.recognize_google(audio)  </span><span class="s2"># convert audio to text</span>
+        <span class="s0">except </span><span class="s1">sr.UnknownValueError: </span><span class="s2"># error: recognizer does not understand</span>
+            <span class="s1">speak(</span><span class="s3">'I did not get that'</span><span class="s1">)</span>
+        <span class="s0">except </span><span class="s1">sr.RequestError:</span>
+            <span class="s1">speak(</span><span class="s3">'Sorry, the service is down'</span><span class="s1">) </span><span class="s2"># error: recognizer is not connected</span>
+        <span class="s1">print(</span><span class="s3">f&quot;&gt;&gt; </span><span class="s0">{</span><span class="s1">voice_data.lower()</span><span class="s0">}</span><span class="s3">&quot;</span><span class="s1">) </span><span class="s2"># print what user said</span>
+        <span class="s0">return </span><span class="s1">voice_data.lower()</span>
+
+<span class="s2"># get string and make a audio file to be played</span>
+<span class="s0">def </span><span class="s1">speak(audio_string):</span>
+    <span class="s1">tts = gTTS(text=audio_string</span><span class="s0">, </span><span class="s1">lang=</span><span class="s3">'en'</span><span class="s1">) </span><span class="s2"># text to speech(voice)</span>
+    <span class="s1">r = random.randint(</span><span class="s4">1</span><span class="s0">,</span><span class="s4">20000000</span><span class="s1">)</span>
+    <span class="s1">audio_file = </span><span class="s3">'audio' </span><span class="s1">+ str(r) + </span><span class="s3">'.mp3'</span>
+    <span class="s1">tts.save(audio_file) </span><span class="s2"># save as mp3</span>
+    <span class="s1">playsound.playsound(audio_file) </span><span class="s2"># play the audio file</span>
+    <span class="s1">print(</span><span class="s3">f&quot;kiri: </span><span class="s0">{</span><span class="s1">audio_string</span><span class="s0">}</span><span class="s3">&quot;</span><span class="s1">) </span><span class="s2"># print what app said</span>
+    <span class="s1">os.remove(audio_file) </span><span class="s2"># remove audio file</span>
+
+<span class="s0">def </span><span class="s1">respond(voice_data):</span>
+    <span class="s2"># 1: greeting</span>
+    <span class="s0">if </span><span class="s1">there_exists([</span><span class="s3">'hey'</span><span class="s0">,</span><span class="s3">'hi'</span><span class="s0">,</span><span class="s3">'hello'</span><span class="s1">]):</span>
+        <span class="s1">greetings = [</span><span class="s3">f&quot;hey, how can I help you </span><span class="s0">{</span><span class="s1">person_obj.name</span><span class="s0">}</span><span class="s3">&quot;</span><span class="s0">, </span><span class="s3">f&quot;hey, what's up? </span><span class="s0">{</span><span class="s1">person_obj.name</span><span class="s0">}</span><span class="s3">&quot;</span><span class="s0">, </span><span class="s3">f&quot;I'm listening </span><span class="s0">{</span><span class="s1">person_obj.name</span><span class="s0">}</span><span class="s3">&quot;</span><span class="s0">, </span><span class="s3">f&quot;how can I help you? </span><span class="s0">{</span><span class="s1">person_obj.name</span><span class="s0">}</span><span class="s3">&quot;</span><span class="s0">, </span><span class="s3">f&quot;hello </span><span class="s0">{</span><span class="s1">person_obj.name</span><span class="s0">}</span><span class="s3">&quot;</span><span class="s1">]</span>
+        <span class="s1">greet = greetings[random.randint(</span><span class="s4">0</span><span class="s0">,</span><span class="s1">len(greetings)-</span><span class="s4">1</span><span class="s1">)]</span>
+        <span class="s1">speak(greet)</span>
+
+    <span class="s2"># 2: name</span>
+    <span class="s0">if </span><span class="s1">there_exists([</span><span class="s3">&quot;what is your name&quot;</span><span class="s0">,</span><span class="s3">&quot;what's your name&quot;</span><span class="s0">,</span><span class="s3">&quot;tell me your name&quot;</span><span class="s1">]):</span>
+        <span class="s0">if </span><span class="s1">person_obj.name:</span>
+            <span class="s1">speak(</span><span class="s3">&quot;my name is Alexis&quot;</span><span class="s1">)</span>
+        <span class="s0">else</span><span class="s1">:</span>
+            <span class="s1">speak(</span><span class="s3">&quot;my name is Alexis. what's your name?&quot;</span><span class="s1">)</span>
+
+    <span class="s0">if </span><span class="s1">there_exists([</span><span class="s3">&quot;my name is&quot;</span><span class="s1">]):</span>
+        <span class="s1">person_name = voice_data.split(</span><span class="s3">&quot;is&quot;</span><span class="s1">)[-</span><span class="s4">1</span><span class="s1">].strip()</span>
+        <span class="s1">speak(</span><span class="s3">f&quot;okay, i will remember that </span><span class="s0">{</span><span class="s1">person_name</span><span class="s0">}</span><span class="s3">&quot;</span><span class="s1">)</span>
+        <span class="s1">person_obj.setName(person_name) </span><span class="s2"># remember name in person object</span>
+
+    <span class="s2"># 3: greeting</span>
+    <span class="s0">if </span><span class="s1">there_exists([</span><span class="s3">&quot;how are you&quot;</span><span class="s0">,</span><span class="s3">&quot;how are you doing&quot;</span><span class="s1">]):</span>
+        <span class="s1">speak(</span><span class="s3">f&quot;I'm very well, thanks for asking </span><span class="s0">{</span><span class="s1">person_obj.name</span><span class="s0">}</span><span class="s3">&quot;</span><span class="s1">)</span>
+
+    <span class="s2"># 4: time</span>
+    <span class="s0">if </span><span class="s1">there_exists([</span><span class="s3">&quot;what's the time&quot;</span><span class="s0">,</span><span class="s3">&quot;tell me the time&quot;</span><span class="s0">,</span><span class="s3">&quot;what time is it&quot;</span><span class="s1">]):</span>
+        <span class="s1">time = ctime().split(</span><span class="s3">&quot; &quot;</span><span class="s1">)[</span><span class="s4">3</span><span class="s1">].split(</span><span class="s3">&quot;:&quot;</span><span class="s1">)[</span><span class="s4">0</span><span class="s1">:</span><span class="s4">2</span><span class="s1">]</span>
+        <span class="s0">if </span><span class="s1">time[</span><span class="s4">0</span><span class="s1">] == </span><span class="s3">&quot;00&quot;</span><span class="s1">:</span>
+            <span class="s1">hours = </span><span class="s3">'12'</span>
+        <span class="s0">else</span><span class="s1">:</span>
+            <span class="s1">hours = time[</span><span class="s4">0</span><span class="s1">]</span>
+        <span class="s1">minutes = time[</span><span class="s4">1</span><span class="s1">]</span>
+        <span class="s1">time = </span><span class="s3">f'</span><span class="s0">{</span><span class="s1">hours</span><span class="s0">} {</span><span class="s1">minutes</span><span class="s0">}</span><span class="s3">'</span>
+        <span class="s1">speak(time)</span>
+
+    <span class="s2"># 5: search google</span>
+    <span class="s0">if </span><span class="s1">there_exists([</span><span class="s3">&quot;search for&quot;</span><span class="s1">]) </span><span class="s0">and </span><span class="s3">'youtube' </span><span class="s0">not in </span><span class="s1">voice_data:</span>
+        <span class="s1">search_term = voice_data.split(</span><span class="s3">&quot;for&quot;</span><span class="s1">)[-</span><span class="s4">1</span><span class="s1">]</span>
+        <span class="s1">url = </span><span class="s3">f&quot;https://google.com/search?q=</span><span class="s0">{</span><span class="s1">search_term</span><span class="s0">}</span><span class="s3">&quot;</span>
+        <span class="s1">webbrowser.get().open(url)</span>
+        <span class="s1">speak(</span><span class="s3">f'Here is what I found for </span><span class="s0">{</span><span class="s1">search_term</span><span class="s0">} </span><span class="s3">on google'</span><span class="s1">)</span>
+
+    <span class="s2"># 6: search youtube</span>
+    <span class="s0">if </span><span class="s1">there_exists([</span><span class="s3">&quot;youtube&quot;</span><span class="s1">]):</span>
+        <span class="s1">search_term = voice_data.split(</span><span class="s3">&quot;for&quot;</span><span class="s1">)[-</span><span class="s4">1</span><span class="s1">]</span>
+        <span class="s1">url = </span><span class="s3">f&quot;https://www.youtube.com/results?search_query=</span><span class="s0">{</span><span class="s1">search_term</span><span class="s0">}</span><span class="s3">&quot;</span>
+        <span class="s1">webbrowser.get().open(url)</span>
+        <span class="s1">speak(</span><span class="s3">f'Here is what I found for </span><span class="s0">{</span><span class="s1">search_term</span><span class="s0">} </span><span class="s3">on youtube'</span><span class="s1">)</span>
+
+    <span class="s2"># 7: get stock price</span>
+    <span class="s0">if </span><span class="s1">there_exists([</span><span class="s3">&quot;price of&quot;</span><span class="s1">]):</span>
+        <span class="s1">search_term = voice_data.lower().split(</span><span class="s3">&quot; of &quot;</span><span class="s1">)[-</span><span class="s4">1</span><span class="s1">].strip() </span><span class="s2">#strip removes whitespace after/before a term in string</span>
+        <span class="s1">stocks = {</span>
+            <span class="s3">&quot;apple&quot;</span><span class="s1">:</span><span class="s3">&quot;AAPL&quot;</span><span class="s0">,</span>
+            <span class="s3">&quot;microsoft&quot;</span><span class="s1">:</span><span class="s3">&quot;MSFT&quot;</span><span class="s0">,</span>
+            <span class="s3">&quot;facebook&quot;</span><span class="s1">:</span><span class="s3">&quot;FB&quot;</span><span class="s0">,</span>
+            <span class="s3">&quot;tesla&quot;</span><span class="s1">:</span><span class="s3">&quot;TSLA&quot;</span><span class="s0">,</span>
+            <span class="s3">&quot;bitcoin&quot;</span><span class="s1">:</span><span class="s3">&quot;BTC-USD&quot;</span>
+        <span class="s1">}</span>
+        <span class="s0">try</span><span class="s1">:</span>
+            <span class="s1">stock = stocks[search_term]</span>
+            <span class="s1">stock = yf.Ticker(stock)</span>
+            <span class="s1">price = stock.info[</span><span class="s3">&quot;regularMarketPrice&quot;</span><span class="s1">]</span>
+
+            <span class="s1">speak(</span><span class="s3">f'price of </span><span class="s0">{</span><span class="s1">search_term</span><span class="s0">} </span><span class="s3">is </span><span class="s0">{</span><span class="s1">price</span><span class="s0">} {</span><span class="s1">stock.info[</span><span class="s3">&quot;currency&quot;</span><span class="s1">]</span><span class="s0">} {</span><span class="s1">person_obj.name</span><span class="s0">}</span><span class="s3">'</span><span class="s1">)</span>
+        <span class="s0">except</span><span class="s1">:</span>
+            <span class="s1">speak(</span><span class="s3">'oops, something went wrong'</span><span class="s1">)</span>
+    <span class="s0">if </span><span class="s1">there_exists([</span><span class="s3">&quot;exit&quot;</span><span class="s0">, </span><span class="s3">&quot;quit&quot;</span><span class="s0">, </span><span class="s3">&quot;goodbye&quot;</span><span class="s1">]):</span>
+        <span class="s1">speak(</span><span class="s3">&quot;going offline&quot;</span><span class="s1">)</span>
+        <span class="s1">exit()</span>
+
+
+<span class="s1">time.sleep(</span><span class="s4">1</span><span class="s1">)</span>
+
+<span class="s1">person_obj = person()</span>
+<span class="s0">while</span><span class="s1">(</span><span class="s4">1</span><span class="s1">):</span>
+    <span class="s1">voice_data = record_audio() </span><span class="s2"># get the voice input</span>
+    <span class="s1">respond(voice_data) </span><span class="s2"># respond</span></pre>
+</body>
+</html>
